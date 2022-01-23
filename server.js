@@ -6,8 +6,12 @@ app.use('/static', express.static('public'));
 
 const countries = require('./models/countries.js');
 
-app.get('/', (req, res) => {
+app.get('/countries', (req, res) => {
     res.render('index.ejs', { countries });
+});
+
+app.get('/*', (req, res) => {
+    res.redirect('/countries');
 });
 
 

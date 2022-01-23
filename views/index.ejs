@@ -41,6 +41,13 @@
                                         <h5 class="has-text-light">Demonym: <%= country.demonym %></h5>
                                         <h5 class="has-text-light">Capital: <%= country.capital %></h5>
                                         <h5 class="has-text-light">Largest City: <%= country.largestCity %></h5>
+                                        <form action="/countries/<%= i %>?_method=DELETE" method="POST">
+                                            <div class="field">
+                                                <div class="control">
+                                                    <button class="button is-danger" type="submit">Remove Country</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
