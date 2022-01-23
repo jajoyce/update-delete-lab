@@ -65,11 +65,20 @@
                             <div class="control">
                                 <button class="button is-info" type="submit">Update Country Info</button>
                             </div>
+                        </div>
+                    </form>
+                    <form action="/countries/<%= index %>?_method=DELETE" method="POST">
+                        <div class="field is-grouped is-grouped-centered">
                             <div class="control">
-                                <a class="button is-light" href="/countries">Cancel</a>
+                                <button class="button is-danger has-background-danger-dark" type="submit">Remove Country</button>
+                            </div>
+                            <div class="control">
+                                <a class="button is-light" href="/countries/<%= index %>">Cancel</a>
                             </div>
                         </div>
                     </form>
+                    <div class="field is-grouped is-grouped-centered">
+                    </div>
                 </article>
             </div>
         </div>

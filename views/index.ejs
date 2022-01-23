@@ -33,24 +33,19 @@
                                             <img src="<%= country.flagImg %>" class="flag-list-img" alt="Flag of <%= country.name %>">
                                         </a>
                                     </figure>
+                                    <div class="field is-grouped is-grouped-centered">
+                                        <div class="control">
+                                            <a class="button is-info" href="/countries/<%= i %>">Show Info Page</a>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="card-content">
                                     <div class="content">
                                         <h2><a href="/countries/<%= i %>" class="has-text-link-light"><%= country.name %></a></h2>
-                                        <h5 class="has-text-light">Population: <%= country.population %></h5>
-                                        <h5 class="has-text-light">Demonym: <%= country.demonym %></h5>
-                                        <h5 class="has-text-light">Capital: <%= country.capital %></h5>
-                                        <h5 class="has-text-light">Largest City: <%= country.largestCity %></h5>
-                                        <form action="/countries/<%= i %>?_method=DELETE" method="POST">
-                                            <div class="field is-grouped">
-                                                <div class="control">
-                                                    <a class="button is-info" href="/countries/<%= i %>/edit">Update Country Info</a>
-                                                </div>
-                                                <div class="control">
-                                                    <button class="button is-danger" type="submit">Remove Country</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        <h5 class="has-text-light">Population: &nbsp;<%= country.population %></h5>
+                                        <h5 class="has-text-light">Demonym: &nbsp;<%= country.demonym %></h5>
+                                        <h5 class="has-text-light">Capital: &nbsp;<%= country.capital %></h5>
+                                        <h5 class="has-text-light">Largest City: &nbsp;<%= country.largestCity %></h5>
                                     </div>
                                 </div>
                             </div>

@@ -33,7 +33,7 @@ app.get('/countries/:countryIndex/edit', (req, res) => {
 
 app.put('/countries/:countryIndex', (req, res) => {
     countries[req.params.countryIndex] = req.body;
-    res.redirect('/countries');
+    res.redirect(`/countries/${req.params.countryIndex}`);
 });
 
 app.delete('/countries/:countryIndex', (req, res) => {
