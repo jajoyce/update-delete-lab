@@ -14,10 +14,6 @@ body {
     border-radius: 0.25rem;
     max-width: 200px;
 }
-/* 
-.img-400 {
-    max-width: 400px;
-}
 
 .form-card {
     padding: 25px 25px 10px 25px;
@@ -29,4 +25,9 @@ body {
 
 .control {
     margin-bottom: 20px;
+}
+
+/* 
+.img-400 {
+    max-width: 400px;
 } */

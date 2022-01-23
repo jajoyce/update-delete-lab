@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <title>Edit Country Info - Update/Delete Lab</title>
+</head>
+<body class="has-navbar-fixed-top has-background-black-ter">
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">List of Countries</a>
+        </div>
+    </nav>
+    <section class="hero has-background-primary-dark has-text-centered">
+        <div class="hero-body">
+            <p class="title has-text-black-bis">Edit Country Info: </p>
+            <h4 class="title is-4 has-text-black-bis"><%= country.name %></h4>
+        </div>
+    </section>
+    <main class="container">
+        <div class="columns is-multiline is-centered">
+            <div class="column is-two-thirds">
+                <article class="card form-card has-background-grey-dark">
+                    <form action="/countries/<%= index %>?_method=PUT" method="POST">
+                        <div class="field">
+                            <label class="label has-text-light">Country Name</label>
+                            <div class="control">
+                                <input class="input" type="text" name="name" placeholder="<%= country.name %>" value="<%= country.name %>">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label has-text-light">Population</label>
+                            <div class="control">
+                                <input class="input" type="text" name="population" placeholder="<%= country.population %>" value="<%= country.population %>">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label has-text-light">Demonym</label>
+                            <div class="control">
+                                <input class="input" type="text" name="demonym" placeholder="<%= country.demonym %>" value="<%= country.demonym %>">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label has-text-light">Capital</label>
+                            <div class="control">
+                                <input class="input" type="text" name="capital" placeholder="<%= country.capital %>" value="<%= country.capital %>">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label has-text-light">Largest City</label>
+                            <div class="control">
+                                <input class="input" type="text" name="largestCity" placeholder="<%= country.largestCity %>" value="<%= country.largestCity %>">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label has-text-light">Flag Image</label>
+                            <div class="control">
+                                <input class="input" type="text" name="flagImg" placeholder="<%= country.flagImg %>" value="<%= country.flagImg %>">
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-centered">
+                            <div class="control">
+                                <button class="button is-info" type="submit">Update Country Info</button>
+                            </div>
+                            <div class="control">
+                                <a class="button is-light" href="/countries">Cancel</a>
+                            </div>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

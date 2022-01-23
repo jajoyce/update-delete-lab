@@ -3,10 +3,11 @@ const app = express();
 const methodOverride = require('method-override');
 const PORT = 4000;
 
+app.set('view engine', 'ejs');
+
 app.use('/static', express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
-
 
 const countries = require('./models/countries.js');
 
@@ -18,6 +19,14 @@ app.delete('/countries/:countryIndex', (req, res) => {
     countries.splice(req.params.countryIndex, 1);
     res.redirect('/countries');
 })
+
+app.get('/countries/:countryIndex/edit', (req, res) => {
+    const context = {
+        country: countries[req.params.countryIndex], 
+        index: req.params.countryIndex
+    };
+    res.render('edit.ejs', context);
+});
 
 app.get('/*', (req, res) => {
     res.redirect('/countries');
