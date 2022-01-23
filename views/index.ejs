@@ -42,7 +42,10 @@
                                         <h5 class="has-text-light">Capital: <%= country.capital %></h5>
                                         <h5 class="has-text-light">Largest City: <%= country.largestCity %></h5>
                                         <form action="/countries/<%= i %>?_method=DELETE" method="POST">
-                                            <div class="field">
+                                            <div class="field is-grouped">
+                                                <div class="control">
+                                                    <a class="button is-info" href="/countries/<%= i %>/edit">Update Country Info</a>
+                                                </div>
                                                 <div class="control">
                                                     <button class="button is-danger" type="submit">Remove Country</button>
                                                 </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="/static/styles/main.css">
-    <title>Edit Country Info - Update/Delete Lab</title>
+    <title>Update Country Info - Update/Delete Lab</title>
 </head>
 <body class="has-navbar-fixed-top has-background-black-ter">
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
@@ -16,7 +16,7 @@
     </nav>
     <section class="hero has-background-primary-dark has-text-centered">
         <div class="hero-body">
-            <p class="title has-text-black-bis">Edit Country Info: </p>
+            <p class="title has-text-black-bis">Update Country Info: </p>
             <h4 class="title is-4 has-text-black-bis"><%= country.name %></h4>
         </div>
     </section>
@@ -61,7 +61,7 @@
                                 <input class="input" type="text" name="flagImg" placeholder="<%= country.flagImg %>" value="<%= country.flagImg %>">
                             </div>
                         </div>
-                        <div class="field is-grouped is-grouped-centered">
+                        <div class="field form-buttons is-grouped is-grouped-centered">
                             <div class="control">
                                 <button class="button is-info" type="submit">Update Country Info</button>
                             </div>
