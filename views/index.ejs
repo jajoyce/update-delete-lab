@@ -23,7 +23,7 @@
         <div class="columns is-multiline is-centered">
             <% for (let i = 0; i < countries.length; i++) { %>
                 <% let country = countries[i]; %>
-                <div class="column is-two-thirds">
+                <div class="column is-three-quarters">
                     <article class="card has-background-grey-dark">
                         <div class="level">
                             <div class="level-left">
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="content">
-                                        <h2><a href="/countries/<%= i %>" class="has-text-link-light"><%= country.name %></a></h3>
+                                        <h2><a href="/countries/<%= i %>" class="has-text-link-light"><%= country.name %></a></h2>
                                         <h5 class="has-text-light">Population: <%= country.population %></h5>
                                         <h5 class="has-text-light">Demonym: <%= country.demonym %></h5>
                                         <h5 class="has-text-light">Capital: <%= country.capital %></h5>

@@ -7,12 +7,17 @@ body {
 }
 
 .img-card-figure {
-    margin: 10px;
+    margin: 20px;
 }
 
 .flag-list-img {
     border-radius: 0.25rem;
     max-width: 200px;
+}
+
+.flag-show-img {
+    border-radius: 0.25rem;
+    max-width: 100%;
 }
 
 .form-card {
@@ -25,6 +30,10 @@ body {
 
 .control {
     margin-bottom: 20px;
+}
+
+.extra-padding-bottom {
+    padding-bottom: 300px;
 }
 
 /* 

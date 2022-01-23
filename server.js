@@ -15,6 +15,14 @@ app.get('/countries', (req, res) => {
     res.render('index.ejs', { countries });
 });
 
+app.get('/countries/:countryIndex', (req, res) => {
+    const context = {
+        country: countries[req.params.countryIndex], 
+        index: req.params.countryIndex
+    };
+    res.render('show.ejs', context);
+});
+
 app.get('/countries/:countryIndex/edit', (req, res) => {
     const context = {
         country: countries[req.params.countryIndex], 
