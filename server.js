@@ -15,17 +15,22 @@ app.get('/countries', (req, res) => {
     res.render('index.ejs', { countries });
 });
 
-app.delete('/countries/:countryIndex', (req, res) => {
-    countries.splice(req.params.countryIndex, 1);
-    res.redirect('/countries');
-})
-
 app.get('/countries/:countryIndex/edit', (req, res) => {
     const context = {
         country: countries[req.params.countryIndex], 
         index: req.params.countryIndex
     };
     res.render('edit.ejs', context);
+});
+
+app.put('/countries/:countryIndex', (req, res) => {
+    countries[req.params.countryIndex] = req.body;
+    res.redirect('/countries');
+});
+
+app.delete('/countries/:countryIndex', (req, res) => {
+    countries.splice(req.params.countryIndex, 1);
+    res.redirect('/countries');
 });
 
 app.get('/*', (req, res) => {
