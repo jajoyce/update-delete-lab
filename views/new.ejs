@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="/static/styles/main.css">
-    <title>Update Country Info - Update/Delete Lab</title>
+    <title>Add New Country - Update/Delete Lab</title>
 </head>
 <body class="has-navbar-fixed-top has-background-black-ter">
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
@@ -16,64 +16,59 @@
     </nav>
     <section class="hero has-background-primary-dark has-text-centered">
         <div class="hero-body">
-            <p class="title has-text-black-bis">Update Country Info: </p>
-            <h4 class="title is-4 has-text-black-bis"><%= country.name %></h4>
+            <p class="title has-text-black-bis">Add New Country</p>
         </div>
     </section>
     <main class="container">
         <div class="columns is-multiline is-centered">
             <div class="column is-two-thirds">
                 <article class="card form-card has-background-grey-dark">
-                    <form action="/countries/<%= index %>?_method=PUT" method="POST">
+                    <form action="/countries" method="POST">
                         <div class="field">
                             <label class="label has-text-light">Country Name</label>
                             <div class="control">
-                                <input class="input" type="text" name="name" placeholder="<%= country.name %>" value="<%= country.name %>">
+                                <input class="input" type="text" name="name" placeholder="Japan">
                             </div>
                         </div>
                         <div class="field">
                             <label class="label has-text-light">Population</label>
                             <div class="control">
-                                <input class="input" type="text" name="population" placeholder="<%= country.population %>" value="<%= country.population %>">
+                                <input class="input" type="text" name="population" placeholder="126 million">
                             </div>
                         </div>
                         <div class="field">
                             <label class="label has-text-light">Demonym</label>
                             <div class="control">
-                                <input class="input" type="text" name="demonym" placeholder="<%= country.demonym %>" value="<%= country.demonym %>">
+                                <input class="input" type="text" name="demonym" placeholder="Japanese">
                             </div>
                         </div>
                         <div class="field">
                             <label class="label has-text-light">Capital</label>
                             <div class="control">
-                                <input class="input" type="text" name="capital" placeholder="<%= country.capital %>" value="<%= country.capital %>">
+                                <input class="input" type="text" name="capital" placeholder="Tokyo">
                             </div>
                         </div>
                         <div class="field">
                             <label class="label has-text-light">Largest City</label>
                             <div class="control">
-                                <input class="input" type="text" name="largestCity" placeholder="<%= country.largestCity %>" value="<%= country.largestCity %>">
+                                <input class="input" type="text" name="largestCity" placeholder="Tokyo">
                             </div>
                         </div>
                         <div class="field">
                             <label class="label has-text-light">Flag Image</label>
                             <div class="control">
-                                <input class="input" type="text" name="flagImg" placeholder="<%= country.flagImg %>" value="<%= country.flagImg %>">
+                                <input class="input" type="text" name="flagImg" placeholder="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/250px-Flag_of_Japan.svg.png">
                             </div>
                         </div>
                         <div class="field form-buttons is-grouped is-grouped-centered">
                             <div class="control">
-                                <button class="button is-info" type="submit">Update Country Info</button>
-                            </div>
-                        </div>
-                    </form>
-                    <form action="/countries/<%= index %>?_method=DELETE" method="POST">
-                        <div class="field is-grouped is-grouped-centered">
-                            <div class="control">
-                                <button type="submit" class="button is-danger has-background-danger-dark">Remove Country</button>
+                                <button type="submit" class="button is-info">Add New Country</button>
                             </div>
                             <div class="control">
-                                <a class="button is-light" href="/countries/<%= index %>">Cancel</a>
+                                <button type="reset" class="button is-warning">Reset Form</button>
+                            </div>
+                            <div class="control">
+                                <a class="button is-light" href="/countries">Cancel</a>
                             </div>
                         </div>
                     </form>

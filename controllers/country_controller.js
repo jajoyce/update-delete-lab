@@ -8,6 +8,15 @@ router.get('/', (req, res) => {
     res.render('index.ejs', { countries });
 });
 
+router.post('/', (req, res) => {
+    countries.push(req.body);
+    res.redirect('/countries');
+});
+
+router.get('/new', (req, res) => {
+    res.render('new.ejs');
+});
+
 router.get('/:countryIndex', (req, res) => {
     const context = {
         country: countries[req.params.countryIndex], 

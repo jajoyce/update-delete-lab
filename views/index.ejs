@@ -11,7 +11,8 @@
 <body class="has-navbar-fixed-top has-background-black-ter">
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="/">List of Countries</a>
+            <a class="navbar-item" href="/countries">List of Countries</a>
+            <a class="navbar-item" href="/countries/new">Add New Country</a>
         </div>
     </nav>
     <section class="hero has-background-primary-dark has-text-centered">
@@ -53,6 +54,13 @@
                     </article>
                 </div>
             <% } %>
+            <div class="column is-three-quarters">
+                <div class="field is-grouped is-grouped-centered">
+                    <div class="control form-buttons">
+                        <a class="button is-info" href="/countries/new">Add New Country</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
