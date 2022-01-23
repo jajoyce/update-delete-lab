@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="static/styles/main.css">
+    <title>List of Countries - Update/Delete Lab</title>
+</head>
+<body class="has-navbar-fixed-top has-background-black-ter">
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">List of Countries</a>
+        </div>
+    </nav>
+    <section class="hero has-background-primary-dark has-text-centered">
+        <div class="hero-body">
+            <p class="title has-text-black-bis">List of Countries</p>
+        </div>
+    </section>
+    <main class="container">
+        <div class="columns is-multiline is-centered">
+            <% for (let i = 0; i < countries.length; i++) { %>
+                <% let country = countries[i]; %>
+                <div class="column is-two-thirds">
+                    <article class="card has-background-grey-dark">
+                        <div class="level">
+                            <div class="level-left">
+                                <div class="card-image">
+                                    <figure class="image img-card-figure media-left">
+                                        <a href="/countries/<%= i %>">
+                                            <img src="<%= country.flagImg %>" class="flag-list-img" alt="Flag of <%= country.name %>">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="content">
+                                        <h2><a href="/countries/<%= i %>" class="has-text-link-light"><%= country.name %></a></h3>
+                                        <h5 class="has-text-light">Population: <%= country.population %></h5>
+                                        <h5 class="has-text-light">Demonym: <%= country.demonym %></h5>
+                                        <h5 class="has-text-light">Capital: <%= country.capital %></h5>
+                                        <h5 class="has-text-light">Largest City: <%= country.largestCity %></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>

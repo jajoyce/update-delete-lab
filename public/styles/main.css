@@ -1,0 +1,32 @@
+body {
+    padding-bottom: 80px;
+}
+
+.hero {
+    margin-bottom: 50px;
+}
+
+.img-card-figure {
+    margin: 10px;
+}
+
+.flag-list-img {
+    border-radius: 0.25rem;
+    max-width: 200px;
+}
+/* 
+.img-400 {
+    max-width: 400px;
+}
+
+.form-card {
+    padding: 25px 25px 10px 25px;
+}
+
+.form-buttons {
+    margin-top: 30px;
+}
+
+.control {
+    margin-bottom: 20px;
+} */
